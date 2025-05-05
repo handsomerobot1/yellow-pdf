@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">yellow pdf</string>
+    <string name="add_pdf">Add PDF</string>
 </resources>

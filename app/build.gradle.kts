@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id ("kotlin-kapt")
+
 }
 
 android {
@@ -36,6 +38,18 @@ android {
 }
 
 dependencies {
+    implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
+
+
+    // For file picker
+    implementation ("com.github.angads25:filepicker:1.1.1")
+
+    // For RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
+    // For Room database (optional, for storing PDF file paths)
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
